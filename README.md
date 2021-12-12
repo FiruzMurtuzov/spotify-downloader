@@ -1,5 +1,5 @@
 # spotify-downloader
 
 For using:
-Run this using:
+pip3 install pytube requests 
 
