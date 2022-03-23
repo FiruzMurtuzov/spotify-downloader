@@ -60,12 +60,14 @@ for t in tracklist['tracks']['items']:
     
     ac.replace(" ", "")
     ac.replace(" ", "")
+    ac.replace("’", "")
+    ac.replace("´", "")
     
     ab.replace("-", "")
 
     abc = ac+'+'+ab
    
-  
+
     print(ac)
    
     abcd  = ''.join(abc.split())
@@ -86,7 +88,7 @@ for url in alllist:
     video = yt.streams.filter(only_audio=True).first()
     print(video.title)
 
-    out_file = video.download(output_path=".")
+    out_file = video.download(output_path="./music")
     print(video_id)
 
     base, ext = os.path.splitext(out_file)
