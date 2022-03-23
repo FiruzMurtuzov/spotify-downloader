@@ -45,7 +45,7 @@ def getPlaylistTracks(token,playlistID,limit):
     res = requests.get(playlistEndPoint,headers=getHeader)
     playlistObject = res.json()
     return playlistObject
-playlistlol = input()
+playlistlol = input("playlist url::")
 playlistID=playlistlol[34:]
 
 tracklist = getPlaylistTracks(token,playlistID,200)
